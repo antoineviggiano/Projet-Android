@@ -3,6 +3,10 @@
     package="fr.isen.viggiano.androidtoolbox">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -11,14 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WebServicesActivity"></activity>
-        <activity android:name=".PermissionsActivity" />
-        <activity android:name=".FormActivity" />
-        <activity android:name=".LifeCycleFragment2" />
-        <activity android:name=".LifeCycleFragment" />
-        <activity android:name=".LifeCycleActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".WebServicesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".PermissionsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".FormActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LifeCycleFragment2" android:screenOrientation="portrait"/>
+        <activity android:name=".LifeCycleFragment" android:screenOrientation="portrait"/>
+        <activity android:name=".LifeCycleActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

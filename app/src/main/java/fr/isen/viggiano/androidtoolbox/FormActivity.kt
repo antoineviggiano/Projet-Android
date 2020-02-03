@@ -74,7 +74,7 @@ class FormActivity : AppCompatActivity() {
             val diff = now - birthday
             val jour = TimeUnit.MILLISECONDS.toDays(diff)
 
-            val date = jour / 365
+            val date = (jour / 365.25).toInt()
 
             alertDialogBuilder
                 .setTitle("Informations")

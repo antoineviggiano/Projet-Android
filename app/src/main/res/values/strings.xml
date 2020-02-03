@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidToolBox</string>
+    <string name="app_name">AntoineV</string>
     <string name="lattitude">Lattitude : %1$f</string>
     <string name="longitude">Longitude : %1$f</string>
 </resources>
