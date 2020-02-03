@@ -7,26 +7,6 @@
     tools:context=".HomeActivity">
 
     <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="10000sp"
-        android:height="70sp"
-        android:background="@android:color/holo_red_dark"
-        android:paddingLeft="20sp"
-        android:paddingTop="16sp"
-        android:text="AndroidToolBox"
-        android:textColor="@android:color/white"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
-
-    <TextView
         android:id="@+id/bonjour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.28" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -47,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.12"
         app:srcCompat="@drawable/isen_logo" />
 
     <TextView
@@ -102,8 +82,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.75" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/lifeCycleImage"
         android:layout_width="67dp"
         android:layout_height="70dp"
         android:background="@android:color/holo_red_dark"
@@ -116,8 +96,8 @@
         app:layout_constraintVertical_bias="0.47"
         app:srcCompat="@android:drawable/stat_notify_chat" />
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <ImageButton
+        android:id="@+id/permissionsImage"
         android:layout_width="67dp"
         android:layout_height="70dp"
         android:background="@android:color/holo_red_dark"
@@ -130,8 +110,8 @@
         app:layout_constraintVertical_bias="0.69"
         app:srcCompat="@android:drawable/stat_sys_speakerphone" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <ImageButton
+        android:id="@+id/webServicesImage"
         android:layout_width="67dp"
         android:layout_height="70dp"
         android:background="@android:color/holo_red_dark"
@@ -144,8 +124,8 @@
         app:layout_constraintVertical_bias="0.69"
         app:srcCompat="@android:drawable/stat_sys_download" />
 
-    <ImageView
-        android:id="@+id/imageView5"
+    <ImageButton
+        android:id="@+id/saveImage"
         android:layout_width="67dp"
         android:layout_height="70dp"
         android:background="@android:color/holo_red_dark"
@@ -157,5 +137,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.47"
         app:srcCompat="@android:drawable/stat_notify_sdcard" />
+
+    <Button
+        android:id="@+id/deconnexionButton"
+        android:layout_width="117dp"
+        android:layout_height="47dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Déconnexion"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

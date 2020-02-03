@@ -1,12 +1,51 @@
 package fr.isen.viggiano.androidtoolbox
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
+import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
 
-class LifeCycleFragment2 : AppCompatActivity() {
+class LifeCycleFragment2 : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_life_cycle_fragment2)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        notificationFragment("onCreate")
+        return inflater.inflate(R.layout.ife_cycle_fragment2, container, false)
+    }
+
+    private fun notificationFragment(message: String) {
+        Log.d("TAG", message)
+        Toast.makeText(activity, "Fragment 2 : $message", Toast.LENGTH_LONG).show()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        notificationFragment("onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        notificationFragment("onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        notificationFragment("onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        notificationFragment("onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        notificationFragment("onDestroy")
     }
 }

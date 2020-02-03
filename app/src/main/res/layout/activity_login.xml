@@ -18,13 +18,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
-        android:id="@+id/valider"
+        android:id="@+id/loginButton"
         android:layout_width="106dp"
         android:layout_height="70dp"
-        android:background="@android:color/holo_red_dark"
+        android:background="#FF0000"
         android:text="Valider"
         android:textColor="@android:color/white"
         android:textSize="20sp"
@@ -35,38 +35,17 @@
         app:layout_constraintVertical_bias="0.85" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/isenLogo"
         android:layout_width="302dp"
         android:layout_height="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintVertical_bias="0.32"
         app:srcCompat="@drawable/isen_logo" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="10000sp"
-        android:height="70sp"
-        android:background="@android:color/holo_red_dark"
-        android:paddingLeft="20sp"
-        android:paddingTop="16sp"
-        android:text="AndroidToolBox"
-        android:textColor="@android:color/white"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/identifiant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -78,13 +57,14 @@
         app:layout_constraintVertical_bias="0.58">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/identifiant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:width="150sp"
             android:hint="Identifiant" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -96,8 +76,10 @@
         app:layout_constraintVertical_bias="0.68">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:width="150sp"
             android:hint="Mot de passe" />
     </com.google.android.material.textfield.TextInputLayout>
 

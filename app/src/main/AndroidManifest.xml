@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.isen.viggiano.androidtoolbox">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".WebServicesActivity"></activity>
+        <activity android:name=".PermissionsActivity" />
+        <activity android:name=".FormActivity" />
+        <activity android:name=".LifeCycleFragment2" />
+        <activity android:name=".LifeCycleFragment" />
+        <activity android:name=".LifeCycleActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
