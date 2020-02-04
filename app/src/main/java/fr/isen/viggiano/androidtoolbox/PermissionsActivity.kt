@@ -7,22 +7,16 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.location.Location
-import android.location.LocationListener
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_permissions.*
 
-
-
-abstract class PermissionsActivity : AppCompatActivity(), LocationListener {
-    override fun onLocationChanged(location: Location?) {
+class PermissionsActivity : AppCompatActivity() {
+    fun onLocationChanged(location: Location?) {
         showCurrentPosition()
     }
 
@@ -66,7 +60,7 @@ abstract class PermissionsActivity : AppCompatActivity(), LocationListener {
                 this, android.Manifest.permission.ACCESS_COARSE_LOCATION
             ) == PackageManager.PERMISSION_GRANTED
         ) {
-            locationManager!!.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 1f, this)
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 1f, this)
             val location = locationManager!!.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
             val lat = location?.latitude.toString()
             latText.text = "Latitude : $lat"
@@ -90,7 +84,7 @@ abstract class PermissionsActivity : AppCompatActivity(), LocationListener {
 
     override fun onStop() {
         super.onStop()
-        locationManager?.removeUpdates(this)
+        locationManager.removeUpdates(this)
     }
 
     fun imageFromGallery() {
