@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_permissions.*
 
 class PermissionsActivity : AppCompatActivity() {
     fun onLocationChanged(location: Location?) {
-        showCurrentPosition()
+        //showCurrentPosition()
     }
 
     private var locationManager: LocationManager? = null
@@ -54,7 +54,7 @@ class PermissionsActivity : AppCompatActivity() {
     }
 
 
-    private fun showCurrentPosition() {
+    /*private fun showCurrentPosition() {
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         if (ActivityCompat.checkSelfPermission(
                 this, android.Manifest.permission.ACCESS_COARSE_LOCATION
@@ -67,7 +67,7 @@ class PermissionsActivity : AppCompatActivity() {
             val long = location?.longitude.toString()
             longText.text = "Longitude : $long"
         }
-    }
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,7 +84,7 @@ class PermissionsActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        locationManager.removeUpdates(this)
+        //locationManager.removeUpdates(this)
     }
 
     fun imageFromGallery() {
